@@ -86,16 +86,44 @@ $(document).ready(function()
 {
 	$("#searchField").on('input', function() {
 		if($.trim($("#searchField").val()).length == 0){
-			$(".questionPackContainer").each(function(){
-				$(this).css('background-color', '#CCCCCC');
+			$(".questionPack").each(function(){
+				$(this).fadeIn( "slow" );
+			});
+			$(".question").each(function(){
+				$(this).fadeIn( "slow" );
 			});
 		}
 		else{
 			$(".questionPackLabel:Contains(" + $.trim($("#searchField").val()) + ")").each(function(){
-				$(this).parent().css('background-color', 'green');
+				$(this).parents(".questionPack").fadeIn( "slow" );
+				//$(this).parent().next(".questionPackQuestions").fadeIn("slow");
+			});
+			$(".questionLabel:Contains(" + $.trim($("#searchField").val()) + ")").each(function(){
+				$(this).parents(".question").fadeIn( "slow" );
+				$(this).parents(".questionPack").fadeIn( "slow" );
 			});
 			$(".questionPackLabel").not(":Contains("+ $.trim($("#searchField").val()) +")").each(function(){
-				$(this).parent().css('background-color', '#CCCCCC');
+				var notFaded = false;
+				var parent = $(this).parent();
+				var next = parent.next(".questionPackQuestions");
+				var questionLabels = next.children(".question").children(".questionSelector").children(".questionLabel");
+				
+				questionLabels.each(function(){
+					var contain = $(this).is(":Contains("+ $.trim($("#searchField").val()) +")");
+					if(contain)
+					{
+						notFaded = true;
+					}
+					else
+					{
+						$(this).parents(".question").fadeOut("slow");
+					}
+				});
+
+				if(!notFaded)
+				{
+					$(this).parents(".questionPack").fadeOut( "slow" );
+				}
 			});
 		}
 	});
