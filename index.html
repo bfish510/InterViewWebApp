@@ -6,13 +6,19 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   		<script src="main.js"></script>
+  		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="titlePage_introDiv">
 			<h1 id="titlePage_appName">Unnamed Interview Application Mockup</h1>
 		</div>
-		<div id="workArea">
-			<div id="leftContainer">
+		<div id="centerArea">
+			<div id="utilitiesBar">
+				<form id="searchForm">
+					Search for: <input type="text" id="searchField" name="search">
+				</form>
+			</div>
+			<div id="categoryContainer">
 				<div class="questionPack">
 					<div class="questionPackContainer">
 						<span class="arrow arrow-right"></span>
@@ -20,9 +26,49 @@
 					</div>
 					<div class="questionPackQuestions">
 						<div class="question">
-							<span class="arrow arrow-right"></span>
-							<span class="questionPackLabel">Hello World how are you doing today i am doing fine</span>
+							<div class="questionSelector">
+								<input type="checkbox" />
+								<span class="arrow arrow-right"></span>
+								<p class="questionLabel">Hello World how are you doing today i am doing fine</p>
+							</div>
+							<div class="questionData">
+								<div>
+									<label>Average Time (minutes): </label>
+									<span>30</span>
+								</div>
+							</div>
 						</div>
+						<div class="question">
+							<div class="questionSelector">
+								<input type="checkbox" />
+								<span class="arrow arrow-right"></span>
+								<p class="questionLabel">Hello World how are you doing today i am doing fine</p>
+							</div>
+							<div class="questionData" data-percentCorrect="70">
+								
+							</div>
+						</div>
+						<div class="question">
+							<div class="questionSelector">
+								<input type="checkbox" />
+								<span class="arrow arrow-right"></span>
+								<p class="questionLabel">Hello World how are you doing today i am doing fine</p>
+							</div>
+							<div class="questionData" data-percentCorrect="60">
+								
+							</div>
+						</div>
+						<div class="question">
+							<div class="questionSelector">
+								<input type="checkbox" />
+								<span class="arrow arrow-right"></span>
+								<p class="questionLabel">Hello World how are you doing today i am doing fine</p>
+							</div>
+							<div class="questionData" data-percentCorrect="50">
+								
+							</div>
+						</div>
+
 					</div>
 				</div>
 				<div class="questionPackContainer">
@@ -38,8 +84,20 @@
 					<span class="questionPackLabel"> Computer Vision </span>
 				</div>
 			</div>
-			<div id="rightContainer">
-				<span>hello</span>
+			<div id="summary">
+				<h2> Summary </h2>
+				<label>Test for: </label>
+				<span>William Fischer</span><br />
+				<label>Expected time to take exam: </label>
+				<span>1 hour 15 minutes</span><br />
+				<label>Areas tested: </label>
+				<span>Computer Vision, Algorithms, Data Structures</span><br />
+			</div>
+			<div id="completion">
+				<span class="shopButton bottomTabs">Shop for more Packs!</span>
+				
+				<span class="continueButton bottomTabs">Continue to formatting! > </span>
+				<span class="backButton bottomTabs"> < Back</span>
 			</div>
 		</div>
 	</body>

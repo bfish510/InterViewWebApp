@@ -12,11 +12,13 @@ body
 {
 	text-align: center;
 }
-#leftContainer{
-	background-color: #444444;
-	resize: horizontal;
-	overflow:auto;
-	float: left;
+#centerArea{
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+}
+#categoryContainer{
+	background-color: #F0F0F0;
 }
 #rightContainer{
 	background-color: #AAAAAA;
@@ -29,6 +31,17 @@ body
 	border-style: ridge;
 	border-width: 1px;
 
+}
+.arrow{
+	
+}
+.questionPackLabel
+{
+	display: inline;
+}
+.questionLabel
+{
+	display: inline;
 }
 .arrow-right{
 	width: 0; 
@@ -55,4 +68,45 @@ body
 	width: inherit;
 	margin-left: 30px;
 	word-wrap: normal;
+}
+.questionPackQuestions{
+	display: none;
+}
+.questionData{
+	margin-left: 30px;
+	display: none;
+	overflow: hidden;
+}
+#summary{
+
+}
+#completion{
+	margin-top: 20px;
+}
+.shopButton{
+	background-color: #CCC;
+}
+.continueButton{
+	float: right;
+	background-color: #BBB;
+}
+.backButton{
+	float: right;
+	background-color: #AAA;
+}
+.bottomTabs{
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+	padding: 10px;
+}
+#searchForm{
+	float: right;
+}
+#utilitiesBar{
+	overflow: hidden 
+}
+.percentCorrectGraph{
+	float: left;
 }
