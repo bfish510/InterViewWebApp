@@ -25,7 +25,7 @@ function toggleChildren(element) {
 	}
 	else
 	{
-		if($(element).hasClass("questionSelector"))
+		if($(element).hasClass("questionSelectorArrow"))
 		{
 			$(element).siblings(".questionData").toggle();
 		}
@@ -96,7 +96,6 @@ $(document).ready(function()
 		else{
 			$(".questionPackLabel:Contains(" + $.trim($("#searchField").val()) + ")").each(function(){
 				$(this).parents(".questionPack").fadeIn( "slow" );
-				//$(this).parent().next(".questionPackQuestions").fadeIn("slow");
 			});
 			$(".questionLabel:Contains(" + $.trim($("#searchField").val()) + ")").each(function(){
 				$(this).parents(".question").fadeIn( "slow" );
@@ -132,10 +131,21 @@ $(document).ready(function()
 		toggleChildren(this);
 		updateArrow(this);
 	});
-	$(".questionSelector").click(function()
-	{
-		toggleChildren(this);
-		updateArrow(this);
+	
+	$(".useQuestion").click(function(){
+		var value = 0;
+		$(".useQuestion").each(function(){
+			if($(this).is(':checked'))
+			{
+				$(this).parent().next().children(".timeToComplete").each(function(){
+					value += parseInt($(this).text());
+				});
+			}
+		});
+		
+		var hours = Math.floor( value / 60);
+		var min = value % 60;
+		$("#totalTime").text(hours + " hours and " + min + " minutes");
 	});
 	/*
 	$(".percentCorrectGraph").each(function(){
@@ -145,5 +155,13 @@ $(document).ready(function()
 	<div class="percentCorrectGraph" data-percentCorrect="80">
 		<span>% who answered correct</span><br/>
 	</div>
+	*/
+
+	/*
+	$(".questionSelectorArrow").click(function()
+	{
+		toggleChildren(this);
+		updateArrow(this);
+	});
 	*/
 });

@@ -1,0 +1,7 @@
+To Do:
+	- Login page
+	- Fake questions and data
+	- Color scheme
+	- Management page
+	- Generator
+	- Add an editor / test taking link thing?

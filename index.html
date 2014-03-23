@@ -21,31 +21,27 @@
 			<div id="categoryContainer">
 				<div class="questionPack">
 					<div class="questionPackContainer">
-						<span class="arrow arrow-right"></span>
+						<span class="arrow arrow-right questionPackContainerArrow"></span>
 						<span class="questionPackLabel"> Algorithms </span>
 					</div>
 					<div class="questionPackQuestions">
 						<div class="question">
 							<div class="questionSelector">
-								<input type="checkbox" />
-								<span class="arrow arrow-right"></span>
-								<p class="questionLabel">Hello World how are you doing today i am doing fine</p>
+								<input type="checkbox" class="useQuestion" />
+								<p class="questionLabel">Write the steps to produce a quick, merge, or wiki sort.</p>
 							</div>
 							<div class="questionData">
-								<div>
-									<label>Percent who answered correctly: </label>
-									<span>50</span><br/>
-									<label>Average Time to Complete(minutes): </label>
-									<span>30</span><br/>
-									<label>Tags: </label>
-									<span> A, B, C, D</span><br/>
-								</div>
+								<label>Percent who answered correctly: </label>
+								<span class="percentCorrect">50</span><br/>
+								<label>Average Time to Complete(minutes): </label>
+								<span class="timeToComplete">30</span><br/>
+								<label>Tags: </label>
+								<span> A, B, C, D</span><br/>
 							</div>
 						</div>
 						<div class="question">
 							<div class="questionSelector">
-								<input type="checkbox" />
-								<span class="arrow arrow-right"></span>
+								<input type="checkbox" class="useQuestion" />
 								<p class="questionLabel">Hello World how are you doing today i am doing fine</p>
 							</div>
 							<div class="questionData" data-percentCorrect="70">
@@ -54,8 +50,7 @@
 						</div>
 						<div class="question">
 							<div class="questionSelector">
-								<input type="checkbox" />
-								<span class="arrow arrow-right"></span>
+								<input type="checkbox" class="useQuestion" />
 								<p class="questionLabel">Hello World how are you doing today i am doing fine</p>
 							</div>
 							<div class="questionData" data-percentCorrect="60">
@@ -64,8 +59,7 @@
 						</div>
 						<div class="question">
 							<div class="questionSelector">
-								<input type="checkbox" />
-								<span class="arrow arrow-right"></span>
+								<input type="checkbox" class="useQuestion" />
 								<p class="questionLabel">Hello World how are you doing today i am doing fine</p>
 							</div>
 							<div class="questionData" data-percentCorrect="50">
@@ -99,7 +93,7 @@
 				<label>Test for: </label>
 				<span>William Fischer</span><br />
 				<label>Expected time to take exam: </label>
-				<span>1 hour 15 minutes</span><br />
+				<span id="totalTime">0 hours and 0 minutes</span><br />
 				<label>Areas tested: </label>
 				<span>Computer Vision, Algorithms, Data Structures</span><br />
 			</div>

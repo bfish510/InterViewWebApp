@@ -37,6 +37,7 @@ body
 }
 .questionPackLabel
 {
+	font-size: x-large;
 	display: inline;
 }
 .questionLabel
@@ -46,17 +47,17 @@ body
 .arrow-right{
 	width: 0; 
 	height: 0; 
-	border-top: 5px solid transparent;
-	border-bottom: 5px solid transparent;
-	border-left: 5px solid black;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid black;
 	display: inline-block;
 }
 .arrow-down{
 	width: 0; 
 	height: 0; 
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-top: 5px solid black;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid black;
 	display: inline-block;
 }
 #workArea
@@ -74,7 +75,6 @@ body
 }
 .questionData{
 	margin-left: 30px;
-	display: none;
 	overflow: hidden;
 }
 #summary{
@@ -84,15 +84,15 @@ body
 	margin-top: 20px;
 }
 .shopButton{
-	background-color: #CCC;
+	background-color: #336699;
 }
 .continueButton{
 	float: right;
-	background-color: #BBB;
+	background-color: #8DB817;
 }
 .backButton{
 	float: right;
-	background-color: #AAA;
+	background-color: #DC4945;
 }
 .bottomTabs{
 	border-bottom-right-radius: 10px;
