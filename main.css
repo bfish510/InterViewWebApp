@@ -18,12 +18,9 @@ body
 	width: 60%;
 }
 #categoryContainer{
-	background-color: #F0F0F0;
+	
 }
-#rightContainer{
-	background-color: #AAAAAA;
-	overflow: hidden;
-}
+
 .questionPackContainer
 {
 	padding: 5px 5px 5px 5px;
@@ -42,6 +39,7 @@ body
 }
 .questionLabel
 {
+	font-size: larger;
 	display: inline;
 }
 .arrow-right{
@@ -69,6 +67,9 @@ body
 	width: inherit;
 	margin-left: 30px;
 	word-wrap: normal;
+}
+.question:nth-child(odd){
+    background-color: #edeff4;
 }
 .questionPackQuestions{
 	display: none;
@@ -100,6 +101,8 @@ body
 	border-top-left-radius: 0px;
 	border-top-left-radius: 0px;
 	padding: 10px;
+	color: #FFFFFF;
+	font-weight:bold;
 }
 #searchForm{
 	float: right;
