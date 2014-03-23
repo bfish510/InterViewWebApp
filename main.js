@@ -134,9 +134,11 @@ $(document).ready(function()
 	
 	$(".useQuestion").click(function(){
 		var value = 0;
+		var checked = 0;
 		$(".useQuestion").each(function(){
 			if($(this).is(':checked'))
 			{
+				checked += 1;
 				$(this).parent().next().children(".timeToComplete").each(function(){
 					value += parseInt($(this).text());
 				});
@@ -146,6 +148,7 @@ $(document).ready(function()
 		var hours = Math.floor( value / 60);
 		var min = value % 60;
 		$("#totalTime").text(hours + " hours and " + min + " minutes");
+		$("#numQuestions").text(checked);
 	});
 	/*
 	$(".percentCorrectGraph").each(function(){

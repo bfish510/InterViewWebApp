@@ -6,3 +6,5 @@ To Do:
 	- Generator
 	- Add an editor / test taking link thing?
 	- Parse resume and generate test?
+	- Review tests
+	- number of questions
