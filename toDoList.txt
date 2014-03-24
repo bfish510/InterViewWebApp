@@ -8,3 +8,5 @@ To Do:
 	- Parse resume and generate test?
 	- Review tests
 	- number of questions
+	- add tags to search
+	- grouping

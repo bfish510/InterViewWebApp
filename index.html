@@ -3,22 +3,24 @@
 	<head>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='main.css' rel='stylesheet' type='text/css'>
+		<link href='formatExam.css' rel='stylesheet' type='text/css'>
+		<link href='printing.css' rel='stylesheet' type='text/css'>
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   		<script src="main.js"></script>
   		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	</head>
 	<body>
-		<div id="titlePage_introDiv">
+		<div id="titlePage_introDiv" class="noPrint">
 			<h1 id="titlePage_appName">Unnamed Interview Application Mockup</h1>
 		</div>
 		<div id="centerArea">
-			<div id="utilitiesBar">
+			<div id="utilitiesBar" class="noPrint">
 				<form id="searchForm">
 					Search for: <input type="text" id="searchField" name="search">
 				</form>
 			</div>
-			<div id="categoryContainer">
+			<div id="categoryContainer" class="noPrint">
 				<div class="questionPack">
 					<div class="questionPackContainer">
 						<span class="arrow arrow-right questionPackContainerArrow"></span>
@@ -88,8 +90,8 @@
 					</div>
 				</div>
 			</div>
-			<div id="summary">
-				<h2> Summary </h2>
+			<h2> Summary </h2>
+			<div id="summary" class="noPrint">
 				<label>Test for: </label>
 				<span>William Fischer</span><br />
 				<label>Number of questions: </label>
@@ -99,11 +101,25 @@
 				<label>Areas tested: </label>
 				<span>Computer Vision, Algorithms, Data Structures</span><br />
 			</div>
-			<div id="completion">
+			<div class="completion">
 				<span class="shopButton bottomTabs">Shop for More Packs</span>
 				
-				<span class="continueButton bottomTabs">Continue to Formatting > </span>
-				<span class="backButton bottomTabs"> < Back</span>
+				<span class="continueButton bottomTabs">Continue to Formatting</span>
+				<span class="backButton bottomTabs">Back</span>
+			</div>
+		</div>
+		<div id="formatExam">
+		<h1 class="noPrint">Format Exam</h1>
+			<div id="formatExamDescription" class="noPrint">
+				<span>Use the move up and move down buttons to organize the questions you have. You can also use the "Or Above" and "Or Below" buttons to allow the exam taker to group the questions in order to allow tghem to do one or the other.</span>
+			</div>
+			<h3 class="noPrint">Questions:</h3>
+			<div id="formatQuestionArea">
+			</div>
+			<div class="completion noPrint">
+				<span class="shopButton bottomTabs">Shop for More Packs</span>
+				<span class="continueButton bottomTabs">Generate Exam</span>
+				<span class="backButton bottomTabs">Back</span>
 			</div>
 		</div>
 	</body>

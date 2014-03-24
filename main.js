@@ -82,6 +82,34 @@ function makeCircle(element, percent){
 	    });
 }
 
+function updateClickEvents(){
+	$(".moveUp").click(function(){
+		var thisQuestion = $(this).siblings(".questionText");
+		var swapWithQuestion = $(this).parent().prev(".formatQuestionContainer").children(".questionText");
+
+		if(swapWithQuestion.size() != 0)
+		{
+			var textSwap = thisQuestion.text();
+			thisQuestion.text(swapWithQuestion.text())
+			swapWithQuestion.text(textSwap);
+		}
+
+	});
+	$(".moveDown").click(function(){
+		var thisQuestion = $(this).siblings(".questionText");
+		var swapWithQuestion = $(this).parent().next(".formatQuestionContainer").children(".questionText");
+
+		if(swapWithQuestion.size() != 0)
+		{
+			var textSwap = thisQuestion.text();
+			thisQuestion.text(swapWithQuestion.text())
+			swapWithQuestion.text(textSwap);
+		}
+	});
+	$(".formatQuestionContainer").addClass("pageBreak");
+	$(".formatQuestionContainer").last().removeClass("pageBreak");
+}
+
 $(document).ready(function()
 {
 	$("#searchField").on('input', function() {
@@ -149,6 +177,33 @@ $(document).ready(function()
 		var min = value % 60;
 		$("#totalTime").text(hours + " hours and " + min + " minutes");
 		$("#numQuestions").text(checked);
+	});
+	$(".continueButton").click(function(){
+		var empty = true;
+		$("#centerArea").fadeOut("slow", function(){
+			$("#formatExam").fadeIn("slow");
+		});
+		$("#formatQuestionArea").empty();
+		var index = 0;
+		$(".useQuestion").each(function(){
+			if($(this).is(':checked'))
+			{
+				index += 1;
+				empty = false;
+				$("#formatQuestionArea").append("<div class=\"formatQuestionContainer\"><span>" + index + ". </span><span class=\"questionText\">" + $(this).next().text() + "</span><br /><input class=\"moveUp\" type=\"button\" value=\"Move Up\" /> <input class=\"moveDown\" type=\"button\" value=\"Move down\"/><br/><br/></div>");
+				
+			}
+		});
+		if(empty)
+		{
+			$("#formatQuestionArea").append("<span>There are no questions here. Go back and add some or go to our store to add some to your account!</span>");
+		}
+		updateClickEvents();
+	});
+	$("#formatExam > .completion > .backButton").click(function(){
+		$("#formatExam").fadeOut("slow", function(){
+			$("#centerArea").fadeIn("slow");
+		});
 	});
 	/*
 	$(".percentCorrectGraph").each(function(){

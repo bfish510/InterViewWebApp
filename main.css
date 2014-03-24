@@ -16,6 +16,8 @@ body
 	margin-left: auto;
 	margin-right: auto;
 	width: 60%;
+	min-width: 900px;
+	overflow: hidden;
 }
 #categoryContainer{
 	
@@ -58,11 +60,6 @@ body
 	border-top: 10px solid black;
 	display: inline-block;
 }
-#workArea
-{
-	border-style: solid;
-	border-width: 5px;
-}
 .question{
 	width: inherit;
 	margin-left: 30px;
@@ -79,9 +76,10 @@ body
 	overflow: hidden;
 }
 #summary{
-
+	margin-left: 50px;
+	margin-right: 50px;
 }
-#completion{
+.completion{
 	margin-top: 20px;
 }
 .shopButton{
@@ -98,11 +96,12 @@ body
 .bottomTabs{
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
-	border-top-left-radius: 0px;
-	border-top-left-radius: 0px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
 	padding: 10px;
 	color: #FFFFFF;
 	font-weight:bold;
+	margin-right: 10px;
 }
 #searchForm{
 	float: right;
@@ -113,3 +112,4 @@ body
 .percentCorrectGraph{
 	float: left;
 }
+
