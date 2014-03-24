@@ -1,0 +1,48 @@
+html, body{
+	height: 100%;
+}
+body
+{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0px;
+}
+#actionBar{
+	float: left;
+	overflow: hidden;
+	width: auto;
+	min-width: 100px;
+	background-color: #B4F0FF;
+	height: 100%;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-left: 5px;
+}
+#workArea{
+}
+#manageExisting{
+	float: left;
+	overflow:hidden;
+	width: 100%;
+}
+#existingExamsTable{
+	width: 100%;
+}
+
+.actionSelection{
+	text-align: right;
+	font-size: large;
+	font-weight: bold;
+	padding-left: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+thead > tr > td{
+	font-weight: bold;
+}
+#searchForm{
+	
+}
+#utilitiesBar{
+	padding-top: 50px;
+	overflow: hidden 
+}

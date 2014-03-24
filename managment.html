@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='management.css' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  		<script src="main.js"></script>
+  		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="actionBar">
+			<h2 class="titleBar">Actions</h2>	
+			<div class="actionSelection">Manage</div>
+			<div class="actionSelection">Create New</div>
+			<div class="actionSelection">Shop</div>
+			<div class="actionSelection">Logout</div>
+		</div>
+		<div id="workArea">
+			<div id="utilitiesBar">
+				<form id="searchForm">
+					Search for: <input type="text" id="searchField" name="search">
+				</form>
+			</div>
+			<div id="manageExisting">
+				<table id="existingExamsTable">
+					<thead>
+						<tr class="existingExamsHead">
+							<td class="taker">Exam For</td>
+							<td class="examTags">Tags</td>
+							<td class="createdOn">Date Created</td>
+							<td class="takenYet">Taken Yet</td>
+							<td class="results">Results</td>
+							<td class="manageExam">Manage Exam</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="existingExams">
+							<td class="taker">William Fischer</td>
+							<td class="examTags">Tags</td>
+							<td class="createdOn">3/23/14</td>
+							<td class="takenYet">No</td>
+							<td class="results">Results</td>
+							<td class="manageExam"><a href="management.html">Manage</a></td>
+						</tr>
+						<tr class="existingExams">
+							<td class="taker">William Fischer</td>
+							<td class="examTags">Tags</td>
+							<td class="createdOn">3/23/14</td>
+							<td class="takenYet">No</td>
+							<td class="results">Results</td>
+							<td class="manageExam"><a href="management.html">Manage</a></td>
+						</tr>
+						<tr class="existingExams">
+							<td class="taker">William Fischer</td>
+							<td class="examTags">Tags</td>
+							<td class="createdOn">3/23/14</td>
+							<td class="takenYet">No</td>
+							<td class="results">Results</td>
+							<td class="manageExam"><a href="management.html">Manage</a></td>
+						</tr>
+						<tr class="existingExams">
+							<td class="taker">William Fischer</td>
+							<td class="examTags">Tags</td>
+							<td class="createdOn">3/23/14</td>
+							<td class="takenYet">No</td>
+							<td class="results">Results</td>
+							<td class="manageExam"><a href="management.html">Manage</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
