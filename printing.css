@@ -8,7 +8,7 @@
         display: none !important;
     }
 
-    .moveUp, .moveDown{
+    .moveUp, .moveDown, #examHelp{
     	display: none !important;
     }
 }

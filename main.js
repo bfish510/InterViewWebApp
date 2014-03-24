@@ -178,7 +178,7 @@ $(document).ready(function()
 		$("#totalTime").text(hours + " hours and " + min + " minutes");
 		$("#numQuestions").text(checked);
 	});
-	$(".continueButton").click(function(){
+	$("#centerArea>.completion>.continueButton").click(function(){
 		var empty = true;
 		$("#centerArea").fadeOut("slow", function(){
 			$("#formatExam").fadeIn("slow");
@@ -191,7 +191,6 @@ $(document).ready(function()
 				index += 1;
 				empty = false;
 				$("#formatQuestionArea").append("<div class=\"formatQuestionContainer\"><span>" + index + ". </span><span class=\"questionText\">" + $(this).next().text() + "</span><br /><input class=\"moveUp\" type=\"button\" value=\"Move Up\" /> <input class=\"moveDown\" type=\"button\" value=\"Move down\"/><br/><br/></div>");
-				
 			}
 		});
 		if(empty)
@@ -205,21 +204,17 @@ $(document).ready(function()
 			$("#centerArea").fadeIn("slow");
 		});
 	});
-	/*
-	$(".percentCorrectGraph").each(function(){
-		var data = this.getAttribute("data-percentCorrect");
-		makeCircle(this, data);
+	$("#formatExam > .completion > .continueButton").click(function(){
+		$("#nameField").text("Exam for " + $("#examFor").text());
+		$("#estimatedTime").text("Estimated time " + $("#totalTime").text());
+		$("#companyField").text("Your Company Name here");
+		$("#examQuestions").empty();
+		$(".formatQuestionContainer").each(function(){
+			$("#examQuestions").append($(this));
+		});
+		$("#formatExam").fadeOut("slow", function(){
+			$("#exam").fadeIn("slow");
+		});
+		$("#examQuestions").find("input").remove();
 	});
-	<div class="percentCorrectGraph" data-percentCorrect="80">
-		<span>% who answered correct</span><br/>
-	</div>
-	*/
-
-	/*
-	$(".questionSelectorArrow").click(function()
-	{
-		toggleChildren(this);
-		updateArrow(this);
-	});
-	*/
 });
